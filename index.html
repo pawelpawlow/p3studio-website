@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="pl" data-theme="light">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<!-- ============================================================
+     SEO / social. Default language is Polish (pl). The PL/EN
+     switch updates <title> and <html lang> at runtime; the
+     statically-rendered content below is Polish for crawlers.
+     ============================================================ -->
+<title>P3 Studio — praktyczne AI, architektura i przywództwo technologiczne</title>
+<meta name="description" content="P3 Studio — Paweł Pawłow. Praktyczne AI, architektura oprogramowania i przywództwo techniczne. Wrocław i cały Dolny Śląsk." />
+<link rel="canonical" href="https://www.p3studio.eu/" />
+
+<meta name="theme-color" content="#f1ebdc" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#14130d" media="(prefers-color-scheme: dark)" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="P3 Studio" />
+<meta property="og:title" content="P3 Studio — AI, architektura i przywództwo techniczne" />
+<meta property="og:description" content="Praktyczne AI, architektura oprogramowania i przywództwo techniczne. Wrocław i cały Dolny Śląsk." />
+<meta property="og:url" content="https://www.p3studio.eu/" />
+<meta property="og:image" content="https://www.p3studio.eu/assets/images/og-image.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="pl_PL" />
+<meta property="og:locale:alternate" content="en_GB" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="P3 Studio — AI, architektura i przywództwo techniczne" />
+<meta name="twitter:description" content="Praktyczne AI, architektura oprogramowania i przywództwo techniczne. Wrocław i Dolny Śląsk." />
+<meta name="twitter:image" content="https://www.p3studio.eu/assets/images/og-image.jpg" />
+
+<!-- Day/night theme + JS flag — set BEFORE first paint to avoid a flash.
+     Manual choice (localStorage) wins; otherwise time of day decides:
+     07:00–18:59 = day (light), else night (dark). -->
+<script>
+  (function () {
+    var el = document.documentElement;
+    el.classList.add("js");
+    try {
+      var saved = localStorage.getItem("p3-theme");
+      var theme;
+      if (saved === "light" || saved === "dark") {
+        theme = saved;
+      } else {
+        var h = new Date().getHours();
+        theme = (h >= 7 && h < 19) ? "light" : "dark";
+      }
+      el.setAttribute("data-theme", theme);
+    } catch (e) {
+      el.setAttribute("data-theme", "light");
+    }
+  })();
+</script>
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='86' font-family='Georgia,serif' fill='%239b3d2c'>P3</text></svg>" />
+
+<!-- Preload the most-used font files (latin subset of each family). -->
+<link rel="preload" href="assets/fonts/marcellus-latin.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="assets/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin />
+
+<link rel="stylesheet" href="styles.css" />
+<script src="script.js" defer></script>
+</head>
+<body>
+
+<a class="skip-link" href="#about" data-i18n="skip">Przejdź do treści</a>
+
+<!-- ============================ HEADER ============================ -->
+<header class="nav" id="top-nav">
+  <div class="container nav-inner">
+    <a href="#top" class="logo" aria-label="P3 Studio">
+      <span class="logo-mark">P3</span>
+      <span class="dot"></span>
+      <span class="logo-word">Studio</span>
+    </a>
+
+    <nav class="nav-links" id="nav-links" aria-label="Główna nawigacja">
+      <a href="#about"><span class="label-stack"><span class="label-spacer" aria-hidden="true">O mnie</span><span class="label-text" data-i18n="nav.0">O mnie</span></span></a>
+      <a href="#services"><span class="label-stack"><span class="label-spacer" aria-hidden="true">Contracts</span><span class="label-text" data-i18n="nav.1">Kontrakty</span></span></a>
+      <a href="#approach"><span class="label-stack"><span class="label-spacer" aria-hidden="true">Kodeks</span><span class="label-text" data-i18n="nav.2">Kodeks</span></span></a>
+      <a href="#contact"><span class="label-stack"><span class="label-spacer" aria-hidden="true">Kontakt</span><span class="label-text" data-i18n="nav.3">Kontakt</span></span></a>
+    </nav>
+
+    <div class="lang-switch" role="group" aria-label="Język / Language">
+      <button type="button" class="lang-btn active" data-lang="pl" aria-pressed="true">PL</button>
+      <span class="sep">/</span>
+      <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+
+    <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Przełącz tryb dzienny/nocny" title="Tryb dzienny/nocny">
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+        <circle cx="12" cy="12" r="4" fill="currentColor" stroke="none" />
+        <g stroke-linecap="round"><path d="M12 2.6v2.3M12 19.1v2.3M2.6 12h2.3M19.1 12h2.3M5.2 5.2l1.6 1.6M17.2 17.2l1.6 1.6M18.8 5.2l-1.6 1.6M6.8 17.2l-1.6 1.6" /></g>
+      </svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" aria-hidden="true" hidden>
+        <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z" fill="currentColor" />
+      </svg>
+    </button>
+
+    <a href="#contact" class="nav-cta">
+      <span class="label-stack"><span class="label-spacer" aria-hidden="true">Porozmawiajmy</span><span class="label-text" data-i18n="cta">Porozmawiajmy</span></span>
+    </a>
+
+    <button type="button" class="menu-btn" id="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="mobile-menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ========================= MOBILE MENU ========================= -->
+<div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <nav aria-label="Menu mobilne">
+    <a href="#about" data-i18n="nav.0">O mnie</a>
+    <a href="#services" data-i18n="nav.1">Kontrakty</a>
+    <a href="#approach" data-i18n="nav.2">Kodeks</a>
+    <a href="#contact" data-i18n="nav.3">Kontakt</a>
+    <a href="#contact" data-i18n="ctaMobile">Porozmawiajmy →</a>
+  </nav>
+  <div class="mobile-menu-foot">
+    <span class="foot">hello@p3studio.eu &nbsp;·&nbsp; Wrocław, EU</span>
+    <div class="lang-switch" role="group" aria-label="Język / Language">
+      <button type="button" class="lang-btn active" data-lang="pl" aria-pressed="true">PL</button>
+      <span class="sep">/</span>
+      <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+  </div>
+</div>
+
+<main>
+
+  <!-- ============================== HERO ============================== -->
+  <section class="hero" id="top">
+    <!-- Video is loaded by script.js only on capable connections (desktop,
+         no reduced-motion, no save-data). On phones/metered links the
+         lightweight gradient below is shown instead — text never depends
+         on the video. -->
+    <video class="hero-video" autoplay muted loop playsinline preload="none" aria-hidden="true"
+           data-webm="assets/video/hero-wroclaw.webm"
+           data-mp4="assets/video/hero-wroclaw.mp4"
+           data-poster="assets/video/hero-poster.jpg"></video>
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-grain" aria-hidden="true"></div>
+    <div class="hero-vignette" aria-hidden="true"></div>
+
+    <span class="hero-slot-tag" id="hero-slot" data-i18n="hero.slot" data-i18n-loaded="hero.slotLoaded">Wrocław z drona</span>
+    <span class="hero-meta-right">
+      <span class="pulse" aria-hidden="true"></span>
+      <span data-i18n="hero.meta">Wrocław · Dolny Śląsk · MMXXVI</span>
+    </span>
+
+    <div class="hero-content">
+      <div class="container">
+        <div class="hero-grid">
+          <div>
+            <span class="eyebrow hero-eyebrow">
+              <span class="line" aria-hidden="true"></span>
+              <span data-i18n="hero.eyebrow">Profesjonalne rzemiosło AI · Wrocław i Dolny Śląsk</span>
+            </span>
+            <h1 class="display hero-headline" data-i18n="hero.headline">Biorę na siebie <em>cyfrowe wyzwania</em> — bez magii, z dobrym ostrzem.</h1>
+            <p class="hero-sub" data-i18n="hero.sub">P3 Studio pomaga firmom bezpiecznie i praktycznie wykorzystywać AI, porządkować architekturę oraz usprawniać dostarczanie oprogramowania. Najpierw rozpoznanie terenu, potem konkretna robota — w duchu wiedźmińskiego rzemiosła: bez obietnic z wieży magów, za to z doświadczeniem ze Szlaku.</p>
+            <div class="hero-actions">
+              <a href="#contact" class="btn-primary"><span data-i18n="hero.primary">Porozmawiajmy</span> <span class="arr" aria-hidden="true"></span></a>
+              <a href="#services" class="btn-ghost" data-i18n="hero.secondary">Zobacz, co robię</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <span class="scroll-cue" aria-hidden="true"></span>
+  </section>
+
+  <!-- ============================== ABOUT ============================== -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-num" data-i18n="about.num">— 01 / O mnie</span>
+        <h2 class="display section-title" data-i18n="about.title">Doświadczenie ze Szlaku — architektura, AI i inżynieria w praktyce.</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-prose reveal">
+          <p data-i18n="about.p0">Prowadzę P3 Studio — niezależną praktykę konsultingową. Nazywam się Paweł Pawłow i pracuję jako Lead Architect oraz Tech Lead, łącząc architekturę oprogramowania, wdrażanie AI i praktyczne przywództwo techniczne.</p>
+          <p data-i18n="about.p1">Pomagam organizacjom przejść od fascynacji AI do użytecznych, powtarzalnych rozwiązań: w pracy z wiedzą, automatyzacji, tworzeniu oprogramowania i podejmowaniu decyzji. Jak na Szlaku — najpierw sprawdzam ślady, ryzyka i kontekst, dopiero potem dobieram narzędzia.</p>
+          <p data-i18n="about.p2">Mam doświadczenie w środowiskach enterprise, platformach cyfrowych, e-commerce, logistyce, ochronie zdrowia i finansach. Łączę szerokie spojrzenie architektoniczne z inżynierską praktyką — stal ma działać, nie tylko dobrze wyglądać w pochwie.</p>
+        </div>
+
+        <aside class="founder-card reveal">
+          <!-- Portrait cross-fades between light/dark photos. If a file is
+               missing the hatched placeholder shows automatically. -->
+          <figure class="founder-portrait has-photo" aria-label="Paweł Pawłow — portret">
+            <picture>
+              <source type="image/webp" srcset="assets/images/portrait-light-561.webp 561w, assets/images/portrait-light-1122.webp 1122w" sizes="(max-width: 980px) 90vw, 38vw" />
+              <img class="portrait-img portrait-light" src="assets/images/portrait-light.jpg" alt="Paweł Pawłow" width="1122" height="1402" loading="lazy" decoding="async" onerror="this.closest('.founder-portrait').classList.remove('has-photo')" />
+            </picture>
+            <picture>
+              <source type="image/webp" srcset="assets/images/portrait-dark-561.webp 561w, assets/images/portrait-dark-1122.webp 1122w" sizes="(max-width: 980px) 90vw, 38vw" />
+              <img class="portrait-img portrait-dark" src="assets/images/portrait-dark.jpg" alt="" width="1122" height="1402" loading="lazy" decoding="async" />
+            </picture>
+          </figure>
+          <div>
+            <div class="eyebrow founder-eyebrow" data-i18n="about.founder">— Założyciel</div>
+            <div class="founder-name">Paweł Pawłow</div>
+            <div class="founder-role" data-i18n="about.role">Lead Architect · Tech Lead</div>
+          </div>
+          <dl class="founder-meta">
+            <div>
+              <dt class="label" data-i18n="about.meta.0.k">Specjalizacja</dt>
+              <dd class="value" data-i18n="about.meta.0.v">AI w firmie, architektura oprogramowania, przywództwo techniczne</dd>
+            </div>
+            <div>
+              <dt class="label" data-i18n="about.meta.1.k">Wykształcenie</dt>
+              <dd class="value" data-i18n="about.meta.1.v">Magister inżynier, systemy informatyczne i elektronika — Politechnika Wrocławska</dd>
+            </div>
+            <div>
+              <dt class="label" data-i18n="about.meta.2.k">Mocne strony</dt>
+              <dd class="value" data-i18n="about.meta.2.v">Myślenie systemowe · Komunikacja · Praktyczne wykorzystanie AI</dd>
+            </div>
+            <div>
+              <dt class="label" data-i18n="about.meta.3.k">Lokalizacja</dt>
+              <dd class="value" data-i18n="about.meta.3.v">Wrocław · Dolny Śląsk · projekty w Polsce i UE</dd>
+            </div>
+          </dl>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== SERVICES ============================== -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-num" data-i18n="services.num">— 02 / Kontrakty</span>
+        <h2 class="display section-title" data-i18n="services.title">Trzy obszary. <em>Jedno</em> rzemiosło.</h2>
+      </div>
+      <div class="services-list reveal">
+
+        <div class="service-row expanded" role="button" tabindex="0" aria-expanded="true">
+          <span class="service-num">
+            <span>01 — P1</span>
+            <span class="service-pillar" data-i18n="services.0.pillar">AI · Eliksiry</span>
+          </span>
+          <span class="service-title" data-i18n="services.0.title">AI w firmie — moc dawkowana z głową</span>
+          <span class="service-desc" data-i18n="services.0.desc">Wprowadzam AI tam, gdzie przynosi realną wartość: w pracy zespołów, dokumentacji, analizie, prototypowaniu i dostarczaniu oprogramowania. Bez magicznych skrótów — z zasadami, bezpieczeństwem i mierzalnym efektem.</span>
+          <span class="service-arrow" aria-hidden="true">—</span>
+          <div class="service-extra">
+            <div class="service-tags">
+              <span class="tag" data-i18n="services.0.tag.0">Warsztaty AI</span>
+              <span class="tag" data-i18n="services.0.tag.1">Strategia i zasady użycia</span>
+              <span class="tag" data-i18n="services.0.tag.2">AI w delivery</span>
+              <span class="tag" data-i18n="services.0.tag.3">Prototypowanie</span>
+              <span class="tag" data-i18n="services.0.tag.4">Automatyzacja pracy z wiedzą</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-row" role="button" tabindex="0" aria-expanded="false">
+          <span class="service-num">
+            <span>02 — P2</span>
+            <span class="service-pillar" data-i18n="services.1.pillar">Architektura · Kuźnia</span>
+          </span>
+          <span class="service-title" data-i18n="services.1.title">Architektura i doradztwo — stal dopasowana do celu</span>
+          <span class="service-desc" data-i18n="services.1.desc">Pomagam projektować i porządkować systemy, integracje, API oraz platformy cyfrowe. Dobieram rozwiązania do celu biznesowego, ograniczeń i ryzyk — tak, aby architektura była solidna w boju, nie tylko efektowna na diagramie.</span>
+          <span class="service-arrow" aria-hidden="true">+</span>
+          <div class="service-extra">
+            <div class="service-tags">
+              <span class="tag" data-i18n="services.1.tag.0">Architektura platform</span>
+              <span class="tag" data-i18n="services.1.tag.1">Integracje i API</span>
+              <span class="tag" data-i18n="services.1.tag.2">Przegląd architektury</span>
+              <span class="tag" data-i18n="services.1.tag.3">Modernizacja systemów</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-row" role="button" tabindex="0" aria-expanded="false">
+          <span class="service-num">
+            <span>03 — P3</span>
+            <span class="service-pillar" data-i18n="services.2.pillar">Przywództwo · Drużyna</span>
+          </span>
+          <span class="service-title" data-i18n="services.2.title">Przywództwo techniczne — prowadzenie drużyny przez mgłę</span>
+          <span class="service-desc" data-i18n="services.2.desc">Wspieram zespoły i liderów w trudnych decyzjach technologicznych: od mentoringu inżynierów, przez planowanie dostarczania, po tłumaczenie między biznesem a technologią. Czasem największy potwór siedzi nie w kodzie, lecz w niejasności.</span>
+          <span class="service-arrow" aria-hidden="true">+</span>
+          <div class="service-extra">
+            <div class="service-tags">
+              <span class="tag" data-i18n="services.2.tag.0">Lead architect</span>
+              <span class="tag" data-i18n="services.2.tag.1">Tech lead na żądanie</span>
+              <span class="tag" data-i18n="services.2.tag.2">Mentoring</span>
+              <span class="tag" data-i18n="services.2.tag.3">Most biznes–IT</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== APPROACH ==============================
+       Displayed 03 → 02 → 01 (reversed). DOM order below is item 2, 1, 0;
+       the CSS counter paints 03, 02, 01. -->
+  <section class="approach" id="approach">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-num" data-i18n="approach.num">— 03 / Kodeks</span>
+        <h2 class="display section-title" data-i18n="approach.title">Trzy zasady mojego zawodowego kodeksu.</h2>
+      </div>
+      <div class="approach-grid">
+        <div class="principle reveal">
+          <h3 data-i18n="approach.2.title">Architektura musi zejść ze ściany do kodu</h3>
+          <p data-i18n="approach.2.body">Strategia, która kończy jako ozdobny diagram, jest jak miecz nad kominkiem. Pomagam przełożyć decyzje architektoniczne na backlog, kod, proces dostarczania i odpowiedzialność zespołu.</p>
+        </div>
+        <div class="principle reveal">
+          <h3 data-i18n="approach.1.title">AI ma być użyteczne, bezpieczne i powtarzalne</h3>
+          <p data-i18n="approach.1.body">Użyteczne — bo poprawia konkretne zadania. Bezpieczne — bo ma granice, nadzór i zdrowy rozsądek. Powtarzalne — bo zostawia po sobie procesy, wzorce i praktyki, które zespół potrafi utrzymać bez wiedźmińskiej obstawy.</p>
+        </div>
+        <div class="principle reveal">
+          <h3 data-i18n="approach.0.title">Najpierw rozpoznanie, potem miecz</h3>
+          <p data-i18n="approach.0.body">Zaczynam od zrozumienia realnej pracy, decyzji, narzędzi i ograniczeń zespołu. Nie sprzedaję AI jako zaklęcia na wszystko — najpierw sprawdzam, jaki problem naprawdę wymaga rozwiązania.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== CONTACT ============================== -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-num" data-i18n="contact.num">— 04 / Kontakt</span>
+      </div>
+      <div class="contact-grid">
+        <h2 class="contact-headline reveal" data-i18n="contact.headline">Masz <em>kontrakt</em> na cyfrowego potwora? Pogadajmy.</h2>
+        <div class="contact-side reveal">
+          <div class="contact-item">
+            <div class="label" data-i18n="contact.email.k">E-mail</div>
+            <a href="mailto:hello@p3studio.eu">hello@p3studio.eu</a>
+          </div>
+          <div class="contact-item">
+            <div class="label" data-i18n="contact.linkedin.k">LinkedIn</div>
+            <a href="https://www.linkedin.com/in/pawelpawlow" target="_blank" rel="noopener">/in/pawelpawlow</a>
+          </div>
+          <div class="contact-item">
+            <div class="label" data-i18n="contact.locationLabel">Lokalizacja</div>
+            <div class="contact-location" data-i18n="contact.location">Wrocław · Dolny Śląsk · projekty w Polsce i UE</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================== FOOTER ============================== -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-logo">
+          <span class="logo-mark">P3</span>
+          <span class="logo-word">Studio</span>
+        </div>
+        <p class="foot-tag" data-i18n="footer.tag">Niezależna praktyka konsultingowa: AI, architektura oprogramowania i przywództwo techniczne. Od rozpoznania po wdrożenie — bez magii, za to z rzemiosłem.</p>
+      </div>
+      <div class="foot-col">
+        <h4 data-i18n="footer.col0.title">Studio</h4>
+        <ul>
+          <li><a href="#about" data-i18n="nav.0">O mnie</a></li>
+          <li><a href="#services" data-i18n="nav.1">Kontrakty</a></li>
+          <li><a href="#approach" data-i18n="nav.2">Kodeks</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4 data-i18n="footer.col1.title">Kontakt</h4>
+        <ul>
+          <li><a href="mailto:hello@p3studio.eu">hello@p3studio.eu</a></li>
+          <li><a href="https://www.linkedin.com/in/pawelpawlow" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://www.p3studio.eu" target="_blank" rel="noopener">www.p3studio.eu</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4 data-i18n="footer.col2.title">Informacje prawne</h4>
+        <ul>
+          <li><a href="privacy.html" data-i18n="footer.privacy">Polityka prywatności</a></li>
+          <li><a href="privacy.html#cookies" data-i18n="footer.cookies">Cookies</a></li>
+          <li><a href="privacy.html#nota" data-i18n="footer.imprint">Nota prawna</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div class="foot-legal">© <span id="foot-year">2026</span> P3 Studio · Paweł Pawłow · <span data-i18n="footer.legal">NIP 894-253-10-26 · ul. Zawiszy Czarnego 65, 52-214 Wrocław</span></div>
+      <div class="foot-legal" data-i18n="footer.tagline">Wrocław · Dolny Śląsk · Rzemiosło zamiast zaklęć</div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

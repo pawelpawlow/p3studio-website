@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="pl" data-theme="light">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Polityka prywatności — P3 Studio</title>
+<meta name="description" content="Polityka prywatności P3 Studio — brak analityki i plików cookie domyślnie, kontakt wyłącznie przez e-mail." />
+<link rel="canonical" href="https://www.p3studio.eu/privacy.html" />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#f1ebdc" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#14130d" media="(prefers-color-scheme: dark)" />
+
+<script>
+  (function () {
+    var el = document.documentElement;
+    el.classList.add("js");
+    try {
+      var saved = localStorage.getItem("p3-theme");
+      var theme;
+      if (saved === "light" || saved === "dark") { theme = saved; }
+      else { var h = new Date().getHours(); theme = (h >= 7 && h < 19) ? "light" : "dark"; }
+      el.setAttribute("data-theme", theme);
+    } catch (e) { el.setAttribute("data-theme", "light"); }
+  })();
+</script>
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='86' font-family='Georgia,serif' fill='%239b3d2c'>P3</text></svg>" />
+<link rel="preload" href="assets/fonts/marcellus-latin.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="assets/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="stylesheet" href="styles.css" />
+
+<style>
+  /* Page-specific layout for the legal/prose document. */
+  .legal-main { padding: clamp(120px, 16vh, 180px) 0 clamp(60px, 10vh, 120px); }
+  .legal { max-width: 760px; }
+  .legal h1 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(34px, 5vw, 56px);
+    color: var(--charcoal);
+    line-height: 1.08;
+    margin: 0 0 10px;
+    letter-spacing: -0.01em;
+  }
+  .legal .updated {
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    color: var(--stone);
+    margin: 0 0 40px;
+  }
+  .legal h2 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(22px, 2.4vw, 30px);
+    color: var(--charcoal);
+    margin: 48px 0 14px;
+    line-height: 1.2;
+  }
+  .legal p, .legal li {
+    font-size: clamp(15px, 1.2vw, 17px);
+    line-height: 1.7;
+    color: var(--charcoal);
+    font-weight: 300;
+  }
+  .legal ul { padding-left: 1.2em; display: grid; gap: 8px; }
+  .legal a { color: var(--bronze); text-underline-offset: 3px; }
+  .legal a:hover { color: var(--bronze-soft); }
+  .legal strong { font-weight: 600; }
+
+  /* "Review before publishing" banner — placeholder reminder for the owner. */
+  .legal-notice {
+    border: 1px solid var(--bronze);
+    background: rgba(155, 61, 44, 0.06);
+    border-radius: 8px;
+    padding: 18px 22px;
+    margin: 0 0 40px;
+    font-size: 14.5px;
+    line-height: 1.6;
+    color: var(--charcoal);
+  }
+  .legal-notice strong { color: var(--bronze); }
+  /* Highlight the placeholders that must be filled in before going live. */
+  .ph {
+    background: rgba(173, 130, 55, 0.18);
+    border-bottom: 1px dashed var(--gold);
+    padding: 0 3px;
+    border-radius: 2px;
+    font-style: normal;
+  }
+  .legal-back {
+    display: inline-block;
+    margin-top: 56px;
+    font-size: 13px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--stone);
+    text-decoration: none;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 4px;
+  }
+  .legal-back:hover { color: var(--bronze); border-color: var(--bronze); }
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#tresc">Przejdź do treści</a>
+
+<header class="nav scrolled" id="top-nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo" aria-label="P3 Studio — strona główna">
+      <span class="logo-mark">P3</span>
+      <span class="dot"></span>
+      <span class="logo-word">Studio</span>
+    </a>
+    <a href="index.html" class="nav-cta">← Strona główna</a>
+  </div>
+</header>
+
+<main class="legal-main" id="tresc">
+  <div class="container">
+    <article class="legal">
+
+      <h1>Polityka prywatności</h1>
+      <p class="updated">Ostatnia aktualizacja: <span class="ph">01.06.2026</span></p>
+
+      <h2>1. Administrator danych</h2>
+      <p>
+        Administratorem danych osobowych jest
+        <span class="ph">P3-Studio Paweł Pawłow</span>,
+        z siedzibą pod adresem
+        <span class="ph">ul. Zawiszy Czarnego 65, 52-214 Wrocław</span>,
+        NIP <span class="ph">894-253-10-26</span>.
+        Kontakt w sprawach prywatności: <a href="mailto:hello@p3studio.eu">hello@p3studio.eu</a>.
+      </p>
+
+      <h2>2. Zakres — strona bez śledzenia</h2>
+      <p>
+        Strona <strong>www.p3studio.eu</strong> jest statyczną wizytówką. Domyślnie:
+      </p>
+      <ul>
+        <li><strong>nie używa analityki</strong> (brak Google Analytics i podobnych narzędzi);</li>
+        <li><strong>nie używa plików cookie</strong> ani innych technologii śledzących do celów marketingowych;</li>
+        <li>nie zawiera formularza kontaktowego — kontakt odbywa się przez link e-mail;</li>
+        <li>nie buduje profili użytkowników ani nie przekazuje danych podmiotom trzecim w celach reklamowych.</li>
+      </ul>
+      <p>
+        Czcionki są hostowane lokalnie (self-hosting), więc przeglądarka nie wykonuje zapytań do
+        zewnętrznych dostawców fontów podczas wczytywania strony.
+      </p>
+
+      <h2 id="cookies">3. Pliki cookie</h2>
+      <p>
+        Strona <strong>nie zapisuje plików cookie</strong>. Wykorzystywany jest jedynie mechanizm
+        <em>localStorage</em> przeglądarki do zapamiętania Twoich preferencji interfejsu
+        (wybrany język oraz tryb dzienny/nocny). Dane te pozostają wyłącznie na Twoim urządzeniu,
+        nie są wysyłane na serwer ani nikomu udostępniane. Możesz je w każdej chwili usunąć,
+        czyszcząc dane witryny w ustawieniach przeglądarki.
+      </p>
+
+      <h2>4. Kontakt e-mailowy</h2>
+      <p>
+        Jeżeli napiszesz na adres <a href="mailto:hello@p3studio.eu">hello@p3studio.eu</a>,
+        administrator przetwarza dane zawarte w wiadomości (adres e-mail, treść, ewentualne dane
+        kontaktowe) wyłącznie w celu udzielenia odpowiedzi i prowadzenia korespondencji.
+      </p>
+      <ul>
+        <li><strong>Podstawa prawna:</strong> art. 6 ust. 1 lit. f RODO (prawnie uzasadniony interes — odpowiedź na zapytanie) oraz, w razie rozmów o współpracy, art. 6 ust. 1 lit. b RODO.</li>
+        <li><strong>Okres przechowywania:</strong> <span class="ph">do 24 miesięcy od ostatniego kontaktu</span>.</li>
+        <li><strong>Dostawca poczty:</strong> <span class="ph">OVHcloud</span>.</li>
+      </ul>
+
+      <h2>5. Twoje prawa</h2>
+      <p>Przysługuje Ci prawo do: dostępu do danych, ich sprostowania, usunięcia, ograniczenia przetwarzania, wniesienia sprzeciwu oraz przenoszenia danych. Masz również prawo wniesienia skargi do Prezesa Urzędu Ochrony Danych Osobowych (PUODO), ul. Stawki 2, 00-193 Warszawa.</p>
+
+      <h2>6. Hosting</h2>
+      <p>
+        Strona jest hostowana na <span class="ph">GitHub Pages</span>.
+        Dostawca hostingu może przetwarzać techniczne dane dostępowe (np. adres IP, logi serwera)
+        we własnym zakresie i na podstawie własnej polityki prywatności, w celu zapewnienia
+        bezpieczeństwa i dostępności usługi.
+      </p>
+
+      <h2 id="nota">7. Nota prawna</h2>
+      <p>
+        Właściciel serwisu: <span class="ph">Paweł Pawłow / P3 Studio</span>.
+        Adres: <span class="ph">ul. Zawiszy Czarnego 65, 52-214 Wrocław</span>.
+        NIP: <span class="ph">894-253-10-26</span>.
+        E-mail: <a href="mailto:hello@p3studio.eu">hello@p3studio.eu</a>.
+      </p>
+
+      <h2>8. Zmiany polityki</h2>
+      <p>
+        Niniejsza polityka może zostać zaktualizowana. Aktualna wersja jest zawsze dostępna pod
+        tym adresem, a data ostatniej zmiany jest podana na górze dokumentu.
+      </p>
+
+      <p style="margin-top:40px;color:var(--stone);font-size:13.5px;">
+        <strong>Uwaga:</strong> dokument musi zostać zweryfikowany przed udostępnieniem strony publicznie.
+      </p>
+
+      <a class="legal-back" href="index.html">← Powrót na stronę główną</a>
+    </article>
+  </div>
+</main>
+
+</body>
+</html>
