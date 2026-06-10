@@ -1,0 +1,5 @@
+# Śmieci metadanych z WSL/Windows (pobrane pliki)
+*:Zone.Identifier
+
+# Eksport strefy DNS z OVH — nie publikować w repo
+ovh-dns-zone.txt

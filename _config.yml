@@ -1,0 +1,9 @@
+# GitHub Pages (Jekyll) — używane WYŁĄCZNIE po to, by wykluczyć pliki
+# wewnętrzne z publikowanej strony. Strona pozostaje czystym statycznym
+# HTML/CSS/JS — Jekyll kopiuje pliki bez front matter 1:1.
+# Pliki wymienione poniżej NIE trafiają na https://www.p3studio.eu/
+exclude:
+  - CLAUDE.md
+  - README.md
+  - PROJECT-BRIEF.md
+  - design/

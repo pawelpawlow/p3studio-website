@@ -17,7 +17,7 @@ privacy.html        # polityka prywatności (PL) — SZABLON do uzupełnienia pr
 styles.css          # cały wygląd + @font-face (self-hosted)
 script.js           # motyw dzień/noc, przełącznik PL/EN, wideo hero, menu mobilne, animacje
 CNAME               # www.p3studio.eu  (domena dla GitHub Pages)
-.nojekyll           # wyłącza przetwarzanie Jekyll na GitHub Pages
+_config.yml         # lista plików WYKLUCZONYCH z publikacji (CLAUDE.md, README, design/…)
 robots.txt          # SEO
 sitemap.xml         # SEO (mapa strony)
 assets/
@@ -146,9 +146,11 @@ wąskim ekranie, wideo hero na szerokim ekranie. Warto też uruchomić **Lightho
    (plik `CNAME` w repo już to ustawia; GitHub zweryfikuje DNS).
 6. Po propagacji DNS zaznacz **Enforce HTTPS**.
 
-Plik `.nojekyll` jest w repo, więc GitHub nie przepuszcza strony przez Jekyll
-(ważne m.in. dla katalogów zaczynających się od podkreślenia i dla pełnej
-kontroli nad plikami).
+GitHub Pages przepuszcza repo przez Jekyll, ale pliki HTML/CSS/JS bez front
+matter są kopiowane 1:1 — strona pozostaje w pełni statyczna. Jekyll jest
+używany wyłącznie po to, by lista `exclude:` w **`_config.yml`** trzymała pliki
+wewnętrzne (CLAUDE.md, README.md, PROJECT-BRIEF.md, `design/`) poza publikowaną
+stroną. Nowe pliki robocze dopisuj do tej listy.
 
 ---
 
