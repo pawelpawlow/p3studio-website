@@ -46,4 +46,5 @@ layout skacze. Oba motywy są w DOM jednocześnie i cross-fade'ują się przez C
 - `design/` to materiały źródłowe z prototypu (React) — strona ich nie używa.
 - Pliki `*:Zone.Identifier` to śmieci z WSL/Windows — ignorowane w `.gitignore`,
   można usuwać.
-- `ovh-dns-zone.txt` (eksport strefy DNS) ma pozostać poza repo (`.gitignore`).
+- `design/ovh-dns-zone.txt` — kopia zapasowa strefy DNS z OVH (same publiczne
+  rekordy; autorytatywna wersja jest w panelu OVH i może się rozjechać).
